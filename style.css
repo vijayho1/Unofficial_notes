@@ -1,31 +1,80 @@
-:root{
-    --primary: #551A8B; /* main color */
-    --text: #222; /* text color */
-    --muted: #666; /*phaaltu chotu texts*/
-    --bg: #f7f7fb; /*bg color*/
-    --card: #fff; /*bg for boxes and cards*/
-    --border: #e5e5ef; /* alt border color*/
-    --radius: 10px;/*cute corner boxes*/
-    --space: 16px;/*padding*/
-    --normal:#ffff;
-}
-/*I am gay*/
-
-
-
 *{box-sizing: border-box;}
 
-body{
+html, body{
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
     color: var(--text);
     background-color: var(--bg);
+    height: 100%;
+    width: 100%;
+    padding: 0;
 }
+
+main{
+    display: grid;
+    grid-template-areas: 
+        "topbar topbar"
+        "ads sidebar"
+        "footer footer";
+
+        grid-template-columns: 0.95fr auto;
+
+        grid-template-rows: auto 1fr auto;
+
+        height: 100%;
+
+         padding-top: 80px;   
+         padding-bottom: 60px; 
+}
+
+header{grid-area: topbar;}
+aside{grid-area: ads;}
+article{grid-area: content;}
+nav { grid-area: sidebar;}
+footer{grid-area: footer;}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  color: #f0f0f0;
+  font-weight: 500;
+  z-index: 1000; 
+}
+
+/* Mobile layout: show welcome (aside) first, then nav */
+@media (max-width: 768px) {
+  main {
+    display: grid;
+    grid-template-areas:
+      "ads"
+      "sidebar";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+}
+
 
 h1, h2, h3{
     margin: 0 0 12px;
-    color: var(--primary);
+    color: #F3F9D2;
 }
 
 p{
@@ -33,7 +82,7 @@ p{
 }
 
 a{
-    color: var(--primary);
+    color: #CBEAA6;
     text-decoration: none;
 }
 
@@ -41,19 +90,8 @@ a:hover, a:focus{
     text-decoration: underline;
 }
 
-.page-header{
-    background-color: #fff;
-    border-bottom: 1px solid var(--border);
-    padding:16px 20px;
-}
 
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.logo img{
+header img{
     width: 61px;
     height: 61px;
     object-fit: contain;
@@ -61,48 +99,26 @@ a:hover, a:focus{
 
 .logo_title{
     font-weight: 700;
+    font-size: larger;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--primary);
+    color: #3D0B37;
     line-height: 1.75;
 }
 
-.main_body {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 24px;
-    max-width: 1100px;
-    margin: 0 auto;
-    align-items: stretch;   /* <–– ADD THIS */
-}
-
-@media(max-width: 768px){
-    .main_body{
-        grid-template-columns: 1fr;
-        padding: 16px 14px;
-    }
-}
-
-
-.welcome{
-    background-color: #3c2b2b;
+aside{
+    background-color: #3D0B37;
     padding: 20px;
-    border-radius: var(--radius);
     font-family: serif;
-    border: 2px dashed orange;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    font-size: large;
 }
 
-.welcome h2,
-.welcome p{
-    color: white;
+aside h2,p{
+    color: #F0F4EF;
 }
 
 .welcome_heading{
-    color: var(--primary);
-    text-decoration: underline #04b189ba dotted;
-    text-underline-offset: 3px;
+    text-decoration: underline #33658A ;
+    text-underline-offset: 1.5px;
 }
 
 .un{
@@ -119,8 +135,97 @@ font-size: 1.1em;
     text-decoration: line-through red 6.2px;
 }
 
+/* NAV */
+nav {
+  grid-area: sidebar;
+  background-color: #B8161B; /* solid deep red */
+  padding: 1.5rem;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* subtle shadow for depth */
+}
+
+nav h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+/* Form styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-form label {
+  font-weight: 600;
+  color: #fff;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #fff;
+  outline: none;
+  background-color: #fff;
+  color: #333;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.login-form input[type="text"]::placeholder,
+.login-form input[type="password"]::placeholder {
+  color: #888;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+  border-color: #F3F9D2; /* highlight color */
+}
+
+/* Submit button */
+.login-form input[type="submit"] {
+  background-color: #33658A; /* accent blue */
+  color: #fff;
+  font-weight: bold;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-form input[type="submit"]:hover {
+  background-color: #27496d;
+  transform: scale(1.05);
+}
+
+/* Icon styling */
+.login-form i {
+  margin-right: 0.5rem;
+  color: #fff;
+}
 
 
+/* FOOTER */
 
 
+footer a {
+  color: #CBEAA6;
+  margin: 0 0.5rem;
+  text-decoration:underline;
+  transition: color 0.3s ease;
+}
 
+footer a:hover {
+  color: #F3F9D2;
+}
+
+footer i {
+  margin-left: 0.5rem;
+  color: #CBEAA6;
+}
