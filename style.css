@@ -131,7 +131,7 @@ font-size: 1.1em;
 .official{
     font: 1.1em 900 var(--primary);
     font-family: cursive;
-    text-decoration: line-through red 6.2px;
+    text-decoration: line-through red 8.2px;
 }
 
 /* NAV */
