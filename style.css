@@ -14,7 +14,7 @@ main{
     display: grid;
     grid-template-areas: 
         "topbar topbar"
-        "ads sidebar"
+        "welcome sidebar"
         "footer footer";
 
         grid-template-columns: 0.95fr auto;
@@ -28,7 +28,7 @@ main{
 }
 
 header{grid-area: topbar;}
-aside{grid-area: ads;}
+aside{grid-area: welcome;}
 article{grid-area: content;}
 nav { grid-area: sidebar;}
 footer{grid-area: footer;}
@@ -39,6 +39,7 @@ header {
   left: 0;
   width: 100%;
   background-color: #fff;
+  height: 2cm;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -63,7 +64,7 @@ footer {
   main {
     display: grid;
     grid-template-areas:
-      "ads"
+      "welcome"
       "sidebar";
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
@@ -127,6 +128,8 @@ font-size: 1.1em;
   font-size: larger;
   
 }
+
+
 
 .official{
     font: 1.1em 900 var(--primary);
@@ -213,15 +216,10 @@ nav h3 {
 /* FOOTER */
 
 
-footer a {
-  color: #CBEAA6;
-  margin: 0 0.5rem;
-  text-decoration:underline;
-  transition: color 0.3s ease;
-}
 
-footer a:hover {
-  color: #F3F9D2;
+
+footer a{
+    font-size: larger;
 }
 
 footer i {
