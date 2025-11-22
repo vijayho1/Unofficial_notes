@@ -11,9 +11,22 @@ html, body{
 }
 
 main{
-    display: inline-block;
+    display: grid;
+    grid-template-areas:
+      "topbar topbar"
+      "selection selection"
+      "footer footer";
+      background-color: #DDF2EB;
+
+      min-height: 100vh;        /* full viewport height */
+      padding-top: 100px;       /* offset for header */
+      padding-bottom: 60px; 
+
 }
 
+header{grid-area: topbar;}
+nav{grid-area: selection;}
+footer{grid-area: footer;}
 
 header {
   position: fixed;
@@ -27,16 +40,32 @@ header {
   z-index: 1000;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  color: #f0f0f0;
+  font-weight: 500;
+  z-index: 1000; 
+}
+
 @media (max-width: 768px) {
   main {
     display: grid;
     grid-template-areas:
-      "ads"
-      "sidebar";
+      "topbar"
+      "selection"
+      "footer";
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
   }
 }
+
+
 
 h1, h2, h3{
     margin: 0 0 12px;
@@ -69,4 +98,75 @@ header img{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #3D0B37;
     line-height: 1.75;
+}
+
+
+select {
+  background-color: #3D0B37;   /* background of the dropdown */
+  color: #F3F9D2;              /* text color */
+  padding: 10px;               /* spacing inside */
+  border: 2px solid #CBEAA6;   /* border style */
+  border-radius: 6px;          /* rounded corners */
+  font-size: 1rem;             /* text size */
+  cursor: pointer;             /* pointer on hover */
+}
+
+select:hover {
+  background-color: #5A1E4A;   /* hover effect */
+}
+
+option {
+  background-color: #222;      /* background of each option */
+  color: #F3F9D2;              /* text color */
+  padding: 8px;
+}
+
+label {
+  color: #3D0B37;   /* dark maroon to match your theme */
+  font-weight: 600; /* make it stand out */
+  margin-right: 8px;
+  text-transform: capitalize;
+  font-size: larger;
+  line-height: 1.75
+}
+
+
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* horizontal center */
+  justify-content: center;/* vertical center */
+  min-height: calc(100vh - 160px); /* full height minus header+footer */
+}
+
+.form-group {
+  margin-bottom: 50px; /* space between each block */
+}
+
+footer a{
+    font-size: larger;
+}
+
+footer i {
+  margin-left: 0.5rem;
+  color: #CBEAA6;
+}
+
+.submit-btn {
+  background-color: #735CDD;
+  color: #ffff;
+  border: 2px solid #D1D646;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.submit-btn:hover{
+  background-color: #000000;
+  color: #fff;
 }
