@@ -19,8 +19,8 @@ main{
       background-color: #DDF2EB;
 
       min-height: 100vh;        /* full viewport height */
-      padding-top: 100px;       /* offset for header */
-      padding-bottom: 60px; 
+      padding-top: 100px;      /* offset for header */
+      padding-bottom: 60px;
 
 }
 
@@ -102,12 +102,12 @@ header img{
 
 
 select {
-  background-color: #3D0B37;   /* background of the dropdown */
-  color: #F3F9D2;              /* text color */
-  padding: 10px;               /* spacing inside */
-  border: 2px solid #CBEAA6;   /* border style */
-  border-radius: 6px;          /* rounded corners */
-  font-size: 1rem;             /* text size */
+  background-color: #3D0B37;   
+  color: #F3F9D2;             
+  padding: 10px;              
+  border: 2px solid #CBEAA6;   
+  border-radius: 6px;         
+  font-size: 1rem;             
   cursor: pointer;             /* pointer on hover */
 }
 
@@ -122,8 +122,8 @@ option {
 }
 
 label {
-  color: #3D0B37;   /* dark maroon to match your theme */
-  font-weight: 600; /* make it stand out */
+  color: #3D0B37;   
+  font-weight: 600; 
   margin-right: 8px;
   text-transform: capitalize;
   font-size: larger;
