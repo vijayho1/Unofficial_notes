@@ -19,19 +19,24 @@ Planned Features
 
 Development Strategy
 We’ll build the project in layers, ensuring each module is stable before moving on.
+
 Phase 1: Authentication
 - Secure login page.
 - Access restricted to KLE IDs.
 - OTP verification for first-time login and password resets.
+
 Phase 2: Notes Portal
 - Launch with CSE notes.
 - Expand to other branches via student contributions.
+
 Phase 3: CGPA Calculator
 - Quick version (≈1 week): manual input of credits and marks.
 - Advanced version (longer): automated mapping from lesson plans.
+
 Phase 4: Campus Navigation
 - Map design + coding (≈1 week).
 - Survey and data collection (≈1 month, faster with student help).
+ 
 Phase 5: Legal & Feedback
 - Add disclaimers, footer, and feedback system.
 - Display “last updated” timestamps for transparency.

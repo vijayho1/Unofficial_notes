@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kle un-official notes hub</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="indexstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+
 <body>
+  <script src="script.js"></script>
   <main>
     <header>
       <img src="/newlogo.png" alt="KLE_Tech_logo" width="130px">
@@ -27,22 +29,32 @@
           Notes Portal
         </h2>
       <p class="welcome_descript">This unofficial portal helps students access  structured notes, model-qp, pyq's and subject guidance curated from seniors</p>
-      <p class="welcome_announce">LOTs yet to come!!!</p>
+      <p class="welcome_announce">NOTE</p>
+      <p class="welcome_announce">Username should have the @kletech.ac.in domain or else you cant login and validate yourself</p>
     </aside>
     
     
     <nav>
       <h3>Login</h3>
       <form class="login-form">
+          <div id="error-msg" style="display:none; color:#d32f2f; margin-bottom:10px; padding:10px; background:#ffebee; border-radius:4px; border-left:4px solid #d32f2f;">
+            <i class="fa-solid fa-circle-exclamation"></i> Only @kletech.ac.in emails are allowed!
+          </div>
+
           <label for="username">
             <i class="fa-regular fa-address-card"></i> Username
           </label>
           <input id="username" type="text" placeholder="USN@kletech.ac.in">
 
-          <label for="password">
+          <label for="otp" style="display:none;" id="otp-label">
+            <i class="fa-solid fa-key"></i> Enter OTP
+          </label>
+          <input id="otp" type="text" placeholder="123456" style="display:none;">
+
+          <label for="password" style="display:none;" id="password-label">
             <i class="fa-solid fa-lock"></i> Password
           </label>
-          <input id="password" type="password" placeholder="1728">
+          <input id="password" type="password" placeholder="1728" style="display:none;">
 
           <input type="submit" value="Login">
       </form>
