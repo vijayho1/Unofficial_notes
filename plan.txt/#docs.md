@@ -1,11 +1,18 @@
 Main funtionality:
-                Helps in getting an organised notes in a simple yet interactive webpage 
+                A complete end-to-end portal for students to get notes,help in navigation/explore and also chat and share their thoughts with a explicit chat detection function
 
-AIM:
-    to help students to have acess to notes before even the announcement of exams and
-    provide proper guidance for the subjects by which are freshly curated by our seniors
+Roadmap(for login credentials):
 
-Roadmap:
+                        first phase:
+                                    integrate mongodb (done)
+                                    send email's from a custom emailId (done)
+                                    have a otp funtionality (done)
+                                    add a password reset funtionality(gonna complete by 22 dec)
+                                    add some customization and other texts in the otp email sent 
+                                    start making terms and condition page where people can see the rules etc
+                                    so like if the person verifies the otp it should be like they accept the terms and conditions!!
+
+Roadmap (for notes features):
         First phase:
                     I aim to develop the html pages of:
                                 Landing page:
@@ -34,16 +41,56 @@ Roadmap:
                                                                 DED
                                                                 DTSI
 
-                                                 selection of lesson:
-                                                            lesson plans
-                                                            model qp's
-                                                            last year paper's
-                                                            class test question's
-                                                            curated yt channel names for each subject
+                                                 And then have a dynamic api pulling where we can show out the folders as required on the basis of unit and then chapters
+                                                 also have other extra folders where we can have lessonplan,modelqp's and pyq's all in a single folder!!
 
-I can do that or just make like drop down boxes for branch,sem,subject 
-and then load another webpage which matches all the selected values and then show another page where they can choose the options in a lesson which are in forms of box templates and after selection they would get all the resources which they can download or view 
+Roadmap for navigation:
 
-i have to decide which side should i take 
+        phase 1:
+                get the data:
+                            #)class numbers:
+                                            with the details of whats actually done in the class like main 
+                                            funtionality
+                                            like its for c programming class,dtsi,pc or other stuffs in the different branch buildings 
+                            #)washrooms:
+                                        here we would have the places of washroom in each floor and each building 
+                                        and also a pic of the godamn place from the common pov
+
+                            #)Teachers cabin's location
+                                        we would locate each lecturer's cabin and the floor the place where they usually sit 
+        
+        phase 2:
+                create a good looking map:
+                                        how?
+                                            take a ss of the building from the google maps if possible 
+                                            or take a blueprint photo
+                                            and then add pointers to them etc
+        
+        phase 3:
+                create an api of the info got
+
+        phase 4:
+                integrate the api with a local run ai 
+                which provides quick info for where to go to reach the destination
+        
+Roadmap for chat system:
+
+        phase 1:                
+                                        soo it needs to have a explicit words detection and clear guidelines 
+                                        and strict imposition of banning people and all
+
+                        design idea:
+                                    like reddit!
+                                                where people could post a thread and keep commenting on it 
+                                                also maintain the post reputation
+
+                            
+
+
+
+
+                                            
+
+
 
                                                             

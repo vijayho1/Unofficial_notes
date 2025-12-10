@@ -1,50 +1,96 @@
-Originally planned as a simple notes portal, this project has now expanded into a multi-functional student utility hub based on feedback from friends, family, and research. The goal is to build a platform that helps students with academics, navigation, and campus life.
 
 
-Planned Features
-- Notes Repository
-- Curated notes for each semester and branch.
-- Start with CSE notes, then expand with contributions from other students.
-- CGPA Calculator
-- Quick version: students input subjects, credits, and marks → rough CGPA.
-- Advanced version: auto-fetch evaluation schemes from lesson plans for more accuracy.
-- Campus Navigation
-- Interactive map with pins for major buildings, labs, library, canteen, and washrooms.
-- Faculty info: staffroom locations, photos, and typical availability.
-- Timetable integration to avoid disturbing teachers during class hours.
-- Feedback & Legal Layer
-- Footer with Terms & Conditions and disclaimers (students must verify info).
-- Option to mail/report corrections or updates.
+# 📘 Student Portal Project
+
+## 🚀 Overview
+A complete end-to-end portal designed for students to:
+- Access **notes** by branch, semester, and subject.
+- Navigate the campus with **interactive maps** and location-based info.
+- Engage in a **community chat system** with moderation and reputation features.
+- Securely log in with **OTP verification, password reset, and Terms & Conditions acceptance**.
+
+This project blends **full-stack development** with **user-centric design**, aiming to create a one-stop solution for academic and campus needs.
+
+---
+
+## 🔑 Authentication Features (Phase 1)
+- ✅ MongoDB integration for credential storage.
+- ✅ Custom email service for sending OTPs.
+- ✅ OTP functionality for secure verification.
+- 🔄 Password reset functionality (target: Dec 22).
+- 🔄 Customization of OTP email text.
+- 🔄 Terms & Conditions page (verification = acceptance).
+
+---
+
+## 📚 Notes Features (Phase 1)
+- **Landing Page** → Branch → Semester → Subject → Units/Chapters.
+- Supported branches: CS, CS-AI, ECE, VLSI, Mech, Civil.
+- Supported semesters: 01–08.
+- Subjects include: C Programming, ITC, Chemistry, BEE, DED, DTSI.
+- Dynamic API pulling for:
+  - Units & chapters.
+  - Extra folders: lesson plans, model QPs, PYQs.
+
+---
+
+## 🗺️ Navigation Features
+**Phase 1: Data Collection**
+- Class numbers with course details.
+- Washroom locations (with photos).
+- Teacher cabin locations.
+
+**Phase 2: Map Creation**
+- Use Google Maps screenshots or blueprints.
+- Add interactive pointers.
+
+**Phase 3: API Development**
+- Serve navigation data via REST API.
+
+**Phase 4: AI Integration**
+- Local AI assistant to provide quick directions.
+
+---
+
+## 💬 Chat System
+**Phase 1: Moderated Community**
+- Explicit word detection.
+- Strict banning rules.
+- Clear guidelines.
+
+**Design Inspiration:**
+- Reddit-style threads.
+- Commenting system.
+- Post reputation (upvotes/downvotes).
+
+---
+
+## 🛠️ Tech Stack
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Node.js, Express
+- **Database:** MongoDB (Mongoose)
+- **Authentication:** Custom email service, OTP, password reset
+- **Future Integration:** AI assistant for navigation queries
+
+---
+
+## 📅 Roadmap
+- **Dec 2025:** Complete password reset + Terms & Conditions.
+- **Jan 2026:** Notes portal HTML pages + dynamic API.
+- **Feb 2026:** Navigation data collection + map prototype.
+- **Mar 2026:** Chat system MVP with moderation.
+- **Apr 2026:** AI integration for navigation.
+
+---
+
+## 🤝 Contribution
+- Fork the repo and submit PRs.
+- Report issues via GitHub Issues.
+- Suggestions for new features are welcome!
+
+---
+
+## 📜 License
+This project is licensed under the MIT License — feel free to use and adapt with attribution.
 
 
-Development Strategy
-We’ll build the project in layers, ensuring each module is stable before moving on.
-
-Phase 1: Authentication
-- Secure login page.
-- Access restricted to KLE IDs.
-- OTP verification for first-time login and password resets.
-
-Phase 2: Notes Portal
-- Launch with CSE notes.
-- Expand to other branches via student contributions.
-
-Phase 3: CGPA Calculator
-- Quick version (≈1 week): manual input of credits and marks.
-- Advanced version (longer): automated mapping from lesson plans.
-
-Phase 4: Campus Navigation
-- Map design + coding (≈1 week).
-- Survey and data collection (≈1 month, faster with student help).
- 
-Phase 5: Legal & Feedback
-- Add disclaimers, footer, and feedback system.
-- Display “last updated” timestamps for transparency.
-
-
-Timeline (Tentative)
-- December: Authentication + CSE notes portal.
-- January: Quick CGPA calculator.
-- Feb–Mar: Expand notes + begin navigation survey.
-- March–April: Faculty info + advanced CGPA calculator.
-- Ongoing: Feedback loop, UI polish, and scaling.
