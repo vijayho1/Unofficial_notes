@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (emailValidated && otpVerified) {
       const password = passwordInput.value.trim();
 
-      if (!password) {
+      if (passwordInput == "1728") {
         alert("❌ Please enter your password!");
         return;
       }
